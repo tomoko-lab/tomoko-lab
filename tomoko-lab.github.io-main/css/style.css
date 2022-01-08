@@ -1,0 +1,346 @@
+/* ------------------------- */
+/* base
+/* ------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  letter-spacing: .05em;
+  line-height: 2;
+  font-family: 'Noto Serif','Noto Serif JP', serif;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+.wrapper {
+  width: 100%;
+  max-width: 1100px;
+  margin: 150px auto 0;
+  padding: 0 40px;
+}
+.section-title {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 70px;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+#inner {
+	max-width: 1000px;
+	margin: 0 auto;
+}
+/* ------------------------- */
+/* topに戻るボタン
+/* ------------------------- */
+#page_top{
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  right: 5%;
+  bottom: -50;
+  background: #A3D4CC;
+  opacity: 0.6;
+  border-radius: 50%;
+}
+#page_top a{
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+}
+#page_top a::before{
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  content: '\f102';
+  font-size: 25px;
+  color: #fff;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -5px;
+  bottom: 15;
+  right: 0;
+  left: 0;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* ------------------------- */
+/* header
+/* ------------------------- */
+#header {
+  padding: 19px 30px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  box-sizing: border-box;
+  width: 100%;
+  transition: .3s;
+}
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.header-contents img {
+  width: 600px;
+  margin-left: -105px;
+  margin-top: -30px;
+}
+.header-contents p {
+  margin-top: -50px;
+  color: #6E5101;
+}
+.burger-btn {
+  display: none;
+}
+/* ------------------------- */
+/* burger
+/* ------------------------- */
+/* ハンバーガーメニュー */
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger-menu__line {
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #6E5101;
+  position: relative;
+  transition: all 0.5s;
+}
+.hamburger-menu__line::before, .hamburger-menu__line::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #6E5101;
+  position: absolute;
+  transition: all 0.5s;
+}
+.hamburger-menu__line::before {
+  transform: translateY(-12px);
+}
+.hamburger-menu__line::after {
+  transform: translateY(12px);
+}
+.hamburger-menu.open .hamburger-menu__line {
+  background-color: transparent;
+}
+.hamburger-menu.open .hamburger-menu__line::before {
+  transform: rotate(45deg);
+}
+.hamburger-menu.open .hamburger-menu__line::after {
+  transform: rotate(-45deg);
+}
+body {
+  overflow-x: hidden;
+}
+/* ナビゲーション */
+.nav-sp {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100vh;
+  padding: 60px 10px 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: right 0.5s;
+}
+.nav-sp a {
+  display: inline-block;
+  padding: 5px 0;
+  color: #513C00;
+  font-size: 2.8rem;
+}
+.nav-sp.open {
+  right: 0;
+}
+.nav-sp ul {
+  margin-top: 170px;
+}
+.nav-sp li {
+  margin: 30px 0 30px;
+}
+.scroll {
+	position: fixed;
+}
+/* ------------------------- */
+/* fv
+/* ------------------------- */
+.fv {
+  height: 100vh;
+  min-height: 550px;
+  position: relative
+}
+.fv img {
+  object-fit: cover;
+  height: 100vh;
+  min-height: 100%;
+}
+/* ------------------------- */
+/* important
+/* ------------------------- */
+.important-list {
+  display: flex;
+  justify-content: space-between;
+}
+.important-list li {
+  width: 20%;
+}
+.important-list li h3 {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.important-list li p {
+  margin-top: 30px;
+	width: 120%;
+}
+/* ------------------------- */
+/* works
+/* ------------------------- */
+#works {
+  margin: 150px 0 150px 0;
+}
+.works-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.works-list li {
+  width: 32%;
+  margin-bottom: 40px;
+}
+.works-contents img {
+	width: 80%;
+}
+.s  {
+	width: 60%;
+	margin: 0 auto;
+	margin-bottom: 150px;
+	margin-top: 100px;
+}
+.s h3 {
+	margin-top: 25px;
+}
+.li-1 {
+	border: 1px solid #333;
+}
+/* ------------------------- */
+/* footer
+/* ------------------------- */
+#footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-image: url(../img/AdobeStock_327930322.jpeg);
+  text-align: center;
+}
+#footer p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: #6e5101;
+  margin-top: -20px;
+}
+#footer img {
+  width: 200px;
+}
+/* ------------------------- */
+/* contact
+/* ------------------------- */
+.section-title h2 {}
+.form {
+  max-width: 700px;
+  margin: 100px auto 150px;
+  font-size: 1.6rem;
+}
+input, textarea {
+  border: 1px solid #141414;
+  padding: 10px;
+}
+.form-part {
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+label {
+  margin-bottom: 5px;
+}
+#input-subject, textarea {
+  line-height: 2;
+  font-size: 1.6rem;
+}
+textarea {
+  resize: none;
+  height: 171px;
+}
+.form-send {
+  text-align: center;
+  margin-top: 50px;
+}
+.form-btn {
+  widows: 235px;
+  padding: 15px 70px;
+  display: block;
+  width: 235px;
+  line-height: 60px;
+  margin: 70px auto 70px;
+  background-color: #A3D4CC;
+  box-shadow: 0 0 6px #1b1310;
+  border-radius: 100px;
+  text-align: center;
+  color: #333333;
+  font-weight: bold;
+  text-decoration: none;
+  transition: .3s;
+  outline: none;
+  appearance: none;
+  border: none;
+  font-size: 2rem;
+}
+.form-btn:hover {
+  opacity: .7;
+  transition: .3s;
+  cursor: pointer;
+}
+/* ------------------------- */
+/* about
+/* ------------------------- */
+#about {
+	max-width: 1000px;
+	
+}
+#about .contents {
+  display: flex;
+  margin: 60px auto 150px auto;
+}
+#about .contents img {
+  width: 70%;
+}
+#about .contents h3 {
+	margin-top: 20px;
+}
